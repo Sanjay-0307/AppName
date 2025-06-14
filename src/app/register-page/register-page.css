@@ -1,0 +1,45 @@
+.form-grid {
+  max-width: 600px;
+  margin: 40px auto;
+  display: grid;
+  row-gap: 15px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-row label {
+  width: 40%;
+  font-weight: bold;
+}
+
+.form-row input,
+.form-row select {
+  width: 55%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.gender-options {
+  display: flex;
+  gap: 15px;
+}
+
+.gender-options label {
+  font-weight: normal;
+}
+
+.full-width {
+  justify-content: center;
+}
+
+button {
+  padding: 10px 20px;
+}

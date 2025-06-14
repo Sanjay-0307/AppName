@@ -1,0 +1,62 @@
+<h1 style="text-align: center;">Registration details</h1>
+<!-- <p>{{ message }}</p> -->
+<form class="form-grid">
+
+  <!-- Username -->
+  <div class="form-row">
+    <label for="username">User Name:</label>
+    <input type="text" id="username" name="UserName" [(ngModel)]="UserName" />
+  </div>
+
+    <div class="form-row">
+     {{ UserName }}
+  </div>
+
+  <!-- Password -->
+  <div class="form-row">
+    <label for="pswd">Password:</label>
+    <input type="password" id="pswd" name="password" />
+  </div>
+
+  <!-- Dropdown -->
+  <div class="form-row">
+    <label for="dropwdownCountry">Country:</label>
+    <select id="dropwdownCountry" name="country">
+      <option value="">--Select--</option>
+      <option value="Canada">Canada</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+    </select>
+  </div>
+
+  <!-- Gender -->
+  <div class="form-row">
+    <label>Gender:</label>
+    <div class="gender-options">
+      <label><input type="radio" name="Gender" value="Male" /> Male</label>
+      <label><input type="radio" name="Gender" value="Female" /> Female</label>
+      <label><input type="radio" name="Gender" value="Trans" /> Trans</label>
+    </div>
+  </div>
+
+  <!-- Checkbox -->
+  <div class="form-row">
+    <label for="chkboxTerms">Accept Terms:</label>
+    <input type="checkbox" id="chkboxTerms" name="terms" />
+  </div>
+
+  <!-- File Upload -->
+  <div class="form-row">
+    <label for="resume">Upload Resume:</label>
+    <input type="file" id="resume" name="resume" />
+  </div>
+
+  <!-- Submit Button -->
+  <div class="form-row full-width">
+    <button type="button" (click)="Save()">Register</button>
+    <br>
+    <button type="button" (mouseover)="onMouseOver()"  (mouseout)="onMouseOut()">Test</button>
+    
+  </div>
+
+</form>

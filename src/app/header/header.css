@@ -1,0 +1,42 @@
+/* Container for header */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo styling */
+.logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Navigation links */
+.nav-right a {
+  color: #f2f2f2;
+  text-decoration: none;
+  padding: 10px 16px;
+  margin-left: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+/* Hover effect */
+.nav-right a:hover {
+  background-color: #ffffff;
+  color: #1f1f1f;
+}
+
+/* Active link */
+.nav-right a.active {
+  background-color: #1098ed;
+  color: white;
+}
