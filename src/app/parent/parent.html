@@ -1,0 +1,11 @@
+<p>parent works!</p>
+
+This is parent values =={{ParentnameVar}}
+
+<input type="text" id="txtName" name="txtName" #txtName>
+
+<br><br>
+<p>Below is Child Component</p>     
+<app-child *ngIf="isVisible" [ChildClassvar]="ParentnameVar" (passDataToParent)="getDataFromChild($event)"></app-child>
+
+<button (click)="isVisible = !isVisible">hide/show</button>

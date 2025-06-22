@@ -1,11 +1,14 @@
 <h1 style="text-align: center;">Registration details</h1>
 <!-- <p>{{ message }}</p> -->
-<form class="form-grid">
+<form class="form-grid example-form" >
 
   <!-- Username -->
   <div class="form-row">
+    <mat-form-field class="example-full-width">
     <label for="username">User Name:</label>
-    <input type="text" id="username" name="UserName" [(ngModel)]="UserName" />
+    <input type="text" id="username" name="UserName" [(ngModel)]="UserName" matInput placeholder="Ex. Sanjay" />
+    </mat-form-field>
+    
   </div>
 
     <div class="form-row">
@@ -14,35 +17,44 @@
 
   <!-- Password -->
   <div class="form-row">
+    <mat-form-field class="example-full-width">
     <label for="pswd">Password:</label>
-    <input type="password" id="pswd" name="password" />
+    <input type="password" id="pswd" name="password"  matInput placeholder="Ex. 123..." />
+    </mat-form-field>
   </div>
 
-  <!-- Dropdown -->
-  <div class="form-row">
-    <label for="dropwdownCountry">Country:</label>
-    <select id="dropwdownCountry" name="country">
-      <option value="">--Select--</option>
-      <option value="Canada">Canada</option>
-      <option value="India">India</option>
-      <option value="USA">USA</option>
-    </select>
-  </div>
+ 
+    <!-- Dropdown -->
+<mat-form-field>
+  <mat-label>Country </mat-label>
+  <mat-select>
+    <mat-option value="one">Canada</mat-option>
+    <mat-option value="two">India</mat-option>
+  </mat-select>
+</mat-form-field>
+  <mat-form-field>
+  <mat-label>D.O.B</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+ <!-- Radio Button -->
+ 
+  <mat-radio-group aria-label="Select Gender">
+    <span><mat-label>Gender: </mat-label></span>
+  <mat-radio-button name="Gender" value="Male">Male</mat-radio-button>
+  <mat-radio-button name="Gender" value="Female">Female</mat-radio-button>
+  <mat-radio-button name="Gender" value="Trans">Trans</mat-radio-button>
 
-  <!-- Gender -->
-  <div class="form-row">
-    <label>Gender:</label>
-    <div class="gender-options">
-      <label><input type="radio" name="Gender" value="Male" /> Male</label>
-      <label><input type="radio" name="Gender" value="Female" /> Female</label>
-      <label><input type="radio" name="Gender" value="Trans" /> Trans</label>
-    </div>
-  </div>
-
+</mat-radio-group>
   <!-- Checkbox -->
   <div class="form-row">
-    <label for="chkboxTerms">Accept Terms:</label>
-    <input type="checkbox" id="chkboxTerms" name="terms" />
+    <section class="example-section">
+    <mat-checkbox class="example-margin" id="chkboxTerms">Accept Terms:</mat-checkbox>
+
+    </section>
+    
   </div>
 
   <!-- File Upload -->
@@ -53,10 +65,17 @@
 
   <!-- Submit Button -->
   <div class="form-row full-width">
-    <button type="button" (click)="Save()">Register</button>
+    <!-- <button type="button" (click)="Save()">Register</button>
     <br>
-    <button type="button" (mouseover)="onMouseOver()"  (mouseout)="onMouseOut()">Test</button>
+    <button type="button" (mouseover)="onMouseOver()"  (mouseout)="onMouseOut()">Test</button> -->
     
   </div>
-
+<section>
+  <div class="example-label">Filled</div>
+  <div class="example-button-row">
+    <button type="button" matButton="filled"  (mouseover)="onMouseOver()"  (mouseout)="onMouseOut()">Event</button>
+    <button  matButton="filled" disabled>Disabled</button>
+    <a matButton="filled" type="button" (click)="Save()" matTooltip="Click here to Register !">Register</a>
+  </div>
+</section>
 </form>

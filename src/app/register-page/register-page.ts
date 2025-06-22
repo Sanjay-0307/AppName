@@ -1,11 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 import { RedirectCommand, Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {provideNativeDateAdapter} from '@angular/material/core';
+import {MatSelectModule} from '@angular/material/select';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-register-page',
-  standalone: false,
   templateUrl: './register-page.html',
-  styleUrl: './register-page.css'
+  providers: [provideNativeDateAdapter()],
+  styleUrl: './register-page.css',
+  imports: [FormsModule,MatRadioModule,MatTooltipModule,MatFormFieldModule, MatInputModule,MatCheckboxModule,MatButtonModule,MatDatepickerModule,MatSelectModule],
 })
 export class RegisterPage implements OnInit{
 constructor(private router: Router) {}
